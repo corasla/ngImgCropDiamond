@@ -120,6 +120,7 @@ crop.factory('cropArea', ['cropCanvas', function(CropCanvas) {
             w: southEastCorner.x - northWestCorner.x,
             h: southEastCorner.y - northWestCorner.y
         };
+        console.log('setting size by corner -> ', size);
         this.setSize(size);
     };
 
@@ -153,7 +154,7 @@ crop.factory('cropArea', ['cropCanvas', function(CropCanvas) {
             h: s.h
         });
     };
-    
+
     CropArea.prototype.setCenterPointOnMove = function(point) {
         var s = this.getSize();
         this.setSizeOnMove({

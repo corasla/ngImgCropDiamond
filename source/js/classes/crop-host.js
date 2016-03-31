@@ -1,4 +1,4 @@
-crop.factory('cropHost', ['$document', '$q', 'cropAreaCircle', 'cropAreaSquare', 'cropAreaRectangle', 'cropEXIF', function($document, $q, CropAreaCircle, CropAreaSquare, CropAreaRectangle, cropEXIF) {
+crop.factory('cropHost', ['$document', '$q', 'cropAreaCircle', 'cropAreaSquare', 'cropAreaDiamond', 'cropAreaRectangle', 'cropEXIF', function($document, $q, CropAreaCircle, CropAreaSquare, CropAreaDiamond, CropAreaRectangle, cropEXIF) {
     /* STATIC FUNCTIONS */
 
     // Get Element's Offset
@@ -117,7 +117,7 @@ crop.factory('cropHost', ['$document', '$q', 'cropAreaCircle', 'cropAreaSquare',
 
                 var areaType = self.getAreaType();
                 // enforce 1:1 aspect ratio for square-like selections
-                if ((areaType === 'circle') || (areaType === 'square')) {
+                if ((areaType === 'circle') || (areaType === 'square') || (areaType === 'diamond')) {
                     if(ch < cw) cw = ch;
                     else ch = cw;
                 }else if(areaType === 'rectangle' && isAspectRatio){
@@ -361,7 +361,6 @@ crop.factory('cropHost', ['$document', '$q', 'cropAreaCircle', 'cropAreaSquare',
                 var newImage = new Image();
                 newImage.onload = function() {
                     events.trigger('load-done');
-
                     cropEXIF.getData(newImage, function() {
                         var orientation = cropEXIF.getTag(newImage, 'Orientation');
 
@@ -670,11 +669,14 @@ crop.factory('cropHost', ['$document', '$q', 'cropAreaCircle', 'cropAreaSquare',
                 AreaClass = CropAreaSquare;
             } else if (type === 'rectangle') {
                 AreaClass = CropAreaRectangle;
+            } else if (type === 'diamond') {
+                AreaClass = CropAreaDiamond;
             }
+
             theArea = new AreaClass(ctx, events);
             theArea.setMinSize(curMinSize);
             theArea.setSize(curSize);
-            if (type === 'square' || type === 'circle') {
+            if (type === 'square' || type === 'circle' || type === 'diamond') {
                 forceAspectRatio = true;
                 theArea.setForceAspectRatio(true);
             }else{
