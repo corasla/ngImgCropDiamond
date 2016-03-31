@@ -98,7 +98,7 @@ crop.factory('cropAreaDiamond', ['cropArea', function(CropArea) {
         }
     };
 
-    CropAreaSquare.prototype.processMouseMove = function(mouseCurX, mouseCurY) {
+    CropAreaDiamond.prototype.processMouseMove = function(mouseCurX, mouseCurY) {
         var cursor = 'default';
         var res = false;
 
