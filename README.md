@@ -1,3 +1,7 @@
+## Information about this directive
+
+It is in fact a forked repo from https://github.com/CrackerakiUA/ngImgCropExtended that I modified for my needs.
+
 ## Live demo
 
 [![Join the chat at https://gitter.im/CrackerakiUA/ngImgCropFullExtended](https://badges.gitter.im/CrackerakiUA/ngImgCropFullExtended.svg)](https://gitter.im/CrackerakiUA/ngImgCropFullExtended?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)

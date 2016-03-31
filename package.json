@@ -17,15 +17,15 @@
         "name": "Honchar Denys",
         "email": "crackeraki@gmail.com"
     }],
-    "name": "ng-img-crop-full-extended",
-    "prettyName": "ngImgCropExtended",
-    "version": "0.5.4",
-    "description": "Image crop directive for AngularJS, square, circle and rectangle areas. Working aspect. Features like export array and more comming.",
+    "name": "ng-img-crop-diamond",
+    "prettyName": "ngImgCropDiamond",
+    "version": "0.5.5",
+    "description": "Image crop directive for AngularJS, square, circle, diamond and rectangle areas. Working aspect. Features like export array and more comming.",
     "license": "MIT",
-    "homepage": "https://github.com/CrackerakiUA/ngImgCropExtended/",
+    "homepage": "https://github.com/corasla/ngImgCropDiamond/",
     "repository": {
         "type": "git",
-        "url": "https://github.com/CrackerakiUA/ngImgCropExtended/"
+        "url": "https://github.com/corasla/ngImgCropDiamond/"
     },
     "dependencies": {},
     "devDependencies": {
