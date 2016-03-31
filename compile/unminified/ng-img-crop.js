@@ -5,7 +5,7 @@
  * Copyright (c) 2016 undefined
  * License: MIT
  *
- * Generated at Thursday, March 31st, 2016, 3:35:29 PM
+ * Generated at Thursday, March 31st, 2016, 4:33:23 PM
  */
 (function() {
 var crop = angular.module('ngImgCrop', []);
@@ -3286,7 +3286,7 @@ crop.directive('imgCrop', ['$timeout', 'cropHost', 'cropPubSub', function ($time
 
             if (scope.chargement == null) scope.chargement = 'Chargement';
             var displayLoading = function () {
-                element.append('<div class="loading"><span>' + scope.chargement + '...</span></div>')
+                element.append('<div class="image-cropper-loading"><span>' + scope.chargement + '...</span></div>')
             };
 
             // Setup CropHost Event Handlers

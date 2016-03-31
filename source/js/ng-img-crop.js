@@ -133,7 +133,7 @@ crop.directive('imgCrop', ['$timeout', 'cropHost', 'cropPubSub', function ($time
 
             if (scope.chargement == null) scope.chargement = 'Chargement';
             var displayLoading = function () {
-                element.append('<div class="loading"><span>' + scope.chargement + '...</span></div>')
+                element.append('<div class="image-cropper-loading"><span>' + scope.chargement + '...</span></div>')
             };
 
             // Setup CropHost Event Handlers
