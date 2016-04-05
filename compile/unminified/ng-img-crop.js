@@ -5,7 +5,7 @@
  * Copyright (c) 2016 undefined
  * License: MIT
  *
- * Generated at Thursday, March 31st, 2016, 4:39:50 PM
+ * Generated at Tuesday, April 5th, 2016, 1:54:08 PM
  */
 (function() {
 var crop = angular.module('ngImgCrop', []);
@@ -1134,7 +1134,7 @@ crop.factory('cropArea', ['cropCanvas', function(CropCanvas) {
             w: southEastCorner.x - northWestCorner.x,
             h: southEastCorner.y - northWestCorner.y
         };
-        console.log('setting size by corner -> ', size);
+        
         this.setSize(size);
     };
 

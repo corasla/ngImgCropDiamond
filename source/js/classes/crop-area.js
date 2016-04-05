@@ -120,7 +120,7 @@ crop.factory('cropArea', ['cropCanvas', function(CropCanvas) {
             w: southEastCorner.x - northWestCorner.x,
             h: southEastCorner.y - northWestCorner.y
         };
-        console.log('setting size by corner -> ', size);
+        
         this.setSize(size);
     };
 
